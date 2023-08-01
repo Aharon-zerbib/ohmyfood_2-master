@@ -336,6 +336,9 @@ footer li em {
     align-items: center;
     justify-content: center;
   }
+  .loader {
+    left: 0;
+  }
 }
 $shadow-light: rgb(220, 220, 220);
 .button {
@@ -344,7 +347,6 @@ $shadow-light: rgb(220, 220, 220);
     box-shadow: 0 5px 5px darken($shadow-light, 10%);
   }
 }
-
 /*-------------------------------------------------------------*/
 /*$heart-color: linear-gradient(45deg, #ff79da, #9356dc);
 
@@ -405,7 +407,6 @@ $shadow-light: rgb(220, 220, 220);
 }
 
 $loader-size: 60px;
-
 .loader {
   position: fixed;
   width: 100%;
@@ -415,15 +416,14 @@ $loader-size: 60px;
   align-items: center;
   justify-content: center;
   z-index: 9999;
+  animation: main-loading 2500ms forwards;
 }
-
 .loader-icon {
   width: $loader-size;
   height: $loader-size;
   border-radius: 50%;
   animation: spin infinite 1.5s;
 }
-
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -432,26 +432,35 @@ $loader-size: 60px;
     transform: rotate(360deg);
   }
 }
-
+@keyframes main-loading {
+  0% {
+    opacity: 1;
+  }
+  98% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+  }
+}
 .loader-circle {
   width: 20px;
   height: 20px;
   border-radius: 50%;
   position: absolute;
 }
-
 .circle-rose {
   left: 50%;
   transform: translateX(-50%);
   background: var(--green, #ff79da);
 }
-
 .circle-violet {
   bottom: 30%;
   right: 10%;
   background: var(--green, #9356dc);
 }
-
 .circle-green {
   bottom: 30%;
   left: 10%;
