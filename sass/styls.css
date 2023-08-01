@@ -432,11 +432,9 @@ footer li em {
 
 .loader {
   position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: white;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -447,17 +445,9 @@ footer li em {
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  animation: showLoader 0s 1, spin infinite 1.5s 0.3s;
+  animation: spin infinite 1.5s;
 }
 
-@keyframes showLoader {
-  0% {
-    transform: scale(0);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -473,14 +463,13 @@ footer li em {
   position: absolute;
 }
 
-.circle-violet {
-  top: 0;
+.circle-rose {
   left: 50%;
   transform: translateX(-50%);
   background: var(--green, #ff79da);
 }
 
-.circle-red {
+.circle-violet {
   bottom: 30%;
   right: 10%;
   background: var(--green, #9356dc);
