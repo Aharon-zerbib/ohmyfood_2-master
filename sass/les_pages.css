@@ -415,6 +415,7 @@ button:hover {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 0px rgb(255, 255, 255);
+    padding-top: 1px;
 }
 
 .like-icon-off {
